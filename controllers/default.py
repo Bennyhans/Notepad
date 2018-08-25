@@ -14,3 +14,7 @@ def store():
         return "Note Saved Successfully"
     else:
         return "Error Please Check"
+
+def seeMemo():
+    Memo =db().select(db.Memo.ALL)
+    return dict(note=Memo)
